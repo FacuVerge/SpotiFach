@@ -15,7 +15,7 @@ import java.util.Set;
 public class Cancion {
 
 	private String nombre;
-	// private pista;
+	private String urlPista;
 	private Set<Artista> artistas;
 	private Album album;
 	private Set<Genero> generos;

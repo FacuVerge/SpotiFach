@@ -16,7 +16,7 @@ public class Album {
 
 	private String nombre;
 	private Integer anio;
-	//private Imagen portada;
+	private String urlPortada;
 	private Set<Artista> artistas;
 
 }
