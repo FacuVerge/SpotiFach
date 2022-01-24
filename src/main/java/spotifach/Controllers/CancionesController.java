@@ -10,14 +10,14 @@ import java.util.List;
 
 @CrossOrigin
 @RestController
-@RequestMapping(value = "/api")
+@RequestMapping(value = "/api/canciones")
 public class CancionesController {
 
 	@Autowired
 	private CancionSvc cancionSvc;
 
 	@ResponseBody
-	@GetMapping("/canciones")
+	@GetMapping("")
 	public ResponseEntity<List<Cancion>> todasLasCanciones(){
 		try {
 			return ResponseEntity.status(200).body(cancionSvc.findAll());
@@ -28,7 +28,7 @@ public class CancionesController {
 	}
 
 	@ResponseBody
-	@GetMapping("/canciones/{genero}")
+	@GetMapping("/{genero}")
 	public ResponseEntity<List<Cancion>> cancionesSegunGenero(@PathVariable String genero){
 		try {
 			return ResponseEntity.status(200).body(cancionSvc.findCancionesByGenero(genero));
