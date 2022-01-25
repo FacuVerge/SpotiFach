@@ -10,6 +10,11 @@ new Vue({
       	}]
     },
     methods: {
+    	elegirGenero: function(genero) {
+
+    		window.location.href = 'reproductor.html/genero=' + genero;
+
+    	}
     },
     created() {
 		fetch(apiGeneros)

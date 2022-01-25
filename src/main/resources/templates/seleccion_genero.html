@@ -15,11 +15,11 @@
 	<div class="contenedor-base" id="app">
 
 		<nav class="menu">
-			<div class="boton-atras">
-				<div class="boton-redondo">
-					<img src="../static/seleccion_genero/img/flecha.png" width="30px" alt="<-">
+			<a class="boton-atras" href="index.html">
+				<div class="boton-redondo" >
+					<img src="../static/seleccion_genero/img/flecha.png" width="30px" alt="<-" >
 				</div>
-			</div>
+			</a>
 			<div class="logo">
 				<div class="marca">
 					<a class="texto-logo">SpotiFach</a>
@@ -41,9 +41,9 @@
 					<div class="informacion-tarjeta">
 						<a class="nombre-genero">{{genero.nombre}}</a>
 						<br>
-						<img class="imagen" v-bind:src="genero.imagen_base64" width="50%">
+						<img class="imagen-genero" v-bind:src="genero.imagen_base64" width="50%">
 						<br>
-						<button class="boton">Comenzar</button>
+						<a class="boton" :href="'reproductor.html?genero=' + genero.nombre">Comenzar</a>
 					</div>
 				</div>
 			</div>

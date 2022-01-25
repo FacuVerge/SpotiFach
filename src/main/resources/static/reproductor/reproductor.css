@@ -1,0 +1,41 @@
+body {
+	background-color: black;
+	background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.contenedor-base {
+  	width: 100%;
+	height: 100%;
+  	margin: auto;
+}
+
+.logo {
+	display: flex;
+	padding-top: 1%;
+	padding-right: 2%;
+	align-items: center;
+    float: right;
+}
+
+.marca {
+	padding-right: 8%;
+}
+
+.texto-logo {
+	color: #FF6F06;
+	font-family: Nobile;
+	font-size: 175%;
+}
+
+.boton-atras {
+	display: inline-block;
+	text-align: left;
+	margin-top: 1%;
+	margin-left: 2%;
+	background-color: #1C1B1B;
+   	cursor: pointer;
+    border-radius: 100%;
+    padding: 1%;
+}
