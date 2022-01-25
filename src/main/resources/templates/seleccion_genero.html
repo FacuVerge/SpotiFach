@@ -3,8 +3,52 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Elige qué quieres escuchar</title>
+	<link rel="stylesheet" href="../static/seleccion_genero/seleccion_genero.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nobile">
+	<link rel="icon" href="../static/resources/img/logo.png" type="image/icon type">
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vue-resource@1.5.1"></script>
 </head>
 <body>
+
+	<div class="contenedor-base" id="app">
+
+		<nav class="menu">
+			<div class="boton-atras">
+				<div class="boton-redondo">
+					<img src="../static/seleccion_genero/img/flecha.png" width="30px" alt="<-">
+				</div>
+			</div>
+			<div class="logo">
+				<div class="marca">
+					<a class="texto-logo">SpotiFach</a>
+				</div>
+				<div class="imagen">
+					<img src="../static/resources/img/logo.png" width="50px">
+				</div>
+			</div>
+		</nav>
+		<br>
+		<br>
+		<div class="pregunta">
+			<a class="texto-simple">¿Qué quieres escuchar?</a>
+		</div>
+		<br>
+		<div class="generos">
+			<div v-for="genero in generos">
+				<div class="tarjeta">
+					<div class="informacion-tarjeta">
+						<a class="nombre-genero">{{genero.nombre}}</a>
+						<!-- Aca va a ir la imagen -->
+						<button class="boton">Comenzar</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="../static/seleccion_genero/seleccion_genero.js"></script>
 
 </body>
 </html>

@@ -1,0 +1,105 @@
+body {
+	background-color: black;
+	background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.contenedor-base {
+  	width: 100%;
+	height: 100%;
+  	margin: auto;
+}
+
+.logo {
+	display: flex;
+	padding-top: 1%;
+	padding-right: 2%;
+	align-items: center;
+    float: right;
+}
+
+.marca {
+	padding-right: 8%;
+}
+
+.texto-logo {
+	color: #FF6F06;
+	font-family: Nobile;
+	font-size: 175%;
+}
+
+.boton-atras {
+	display: inline-block;
+	text-align: left;
+	margin-top: 1%;
+	margin-left: 2%;
+	background-color: #1C1B1B;
+   	cursor: pointer;
+    border-radius: 100%;
+    padding: 1%;
+}
+
+.pregunta {
+	text-align: center;
+}
+
+.texto-simple {
+	color: #FF6F06;
+	font-family: Nobile;
+	font-size: 350%;
+}
+
+.generos {
+	display: flex;
+	justify-content: center;
+}
+
+.tarjeta {
+	width: 300px;
+	height: 350px;
+	background-color: #1C1B1B;
+	border-radius: 10%;
+	border-right: 3px solid white;
+	border-bottom: 3px solid white;
+	border-color: #FF6F06;
+	margin: 50px;
+}
+
+.informacion-tarjeta {
+	padding: 15%;
+	justify-content: center;
+	text-align: center;
+}
+
+.nombre-genero {
+	color: white;
+	font-family: Nobile;
+	font-size: 250%;
+}
+
+.boton {
+	background-color: #FF6F06;
+    color: #F1F8F5;
+    border: none;
+    cursor: pointer;
+    font-size: 120%;
+    border-radius: 40px;
+    padding: 4% 15% 3% 15%;
+    margin-top: 15%;
+    margin-left: 10%;
+    font-family: Nobile;
+}
+
+.boton:hover {
+	background-color: #1C1B1B;
+	color: #FF6F06;
+    border: 1px solid #FF6F06;
+    cursor: pointer;
+    font-size: 120%;
+    border-radius: 40px;
+    padding: 4% 15% 3% 15%;
+    margin-top: 15%;
+    margin-left: 10%;
+    font-family: Nobile;
+}
