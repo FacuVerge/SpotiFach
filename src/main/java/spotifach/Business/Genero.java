@@ -22,4 +22,7 @@ public class Genero {
 
 	private String nombre;
 
+	@Column(name = "imagen_base64", columnDefinition = "LONGTEXT")
+	private String imagen_base64;
+
 }

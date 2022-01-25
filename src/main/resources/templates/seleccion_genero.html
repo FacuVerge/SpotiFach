@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml">
 <head>
 	<meta charset="UTF-8">
 	<title>Elige qué quieres escuchar</title>
@@ -40,7 +40,9 @@
 				<div class="tarjeta">
 					<div class="informacion-tarjeta">
 						<a class="nombre-genero">{{genero.nombre}}</a>
-						<!-- Aca va a ir la imagen -->
+						<br>
+						<img class="imagen" v-bind:src="genero.imagen_base64" width="50%">
+						<br>
 						<button class="boton">Comenzar</button>
 					</div>
 				</div>

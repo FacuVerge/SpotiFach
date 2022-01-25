@@ -5,7 +5,8 @@ new Vue({
     data: {
       	generos: [{
       		id: null,
-      		nombre: null
+      		nombre: null,
+      		imagen_base64: null
       	}]
     },
     methods: {
