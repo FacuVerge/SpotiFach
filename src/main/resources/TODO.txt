@@ -1,0 +1,10 @@
+
+Version 1: Completa
+
+-- Para llegar a una versión 2 --
+
+. Agregar barra para manejar el volumen de la canción
+. Agregar información a la pantalla de reproductor: - Año de lanzamiento
+													- Integrantes de la banda
+
+. Mejorar EndPoints con DTOs para no devolver siempre toda la informacion
