@@ -17,7 +17,7 @@
 		<nav class="menu">
 			<a class="boton-atras" href="seleccion_genero.html">
 				<div>
-					<img src="../static/resources/img/flecha.png" width="30px" alt="<-" >
+					<img src="../static/resources/img/flecha.png" alt="<-" >
 				</div>
 			</a>
 			<div class="logo">
@@ -35,7 +35,9 @@
 			<a v-on:click="anteriorCancion()" class="arrow"><img src="../static/reproductor/img/left.png"/></a>
 
 			<div class="cancion" v-show="indice == index" v-for="(cancion, index) in this.canciones">
-				<!-- <img :src="cancion.urlPista" height="220" width="260"> -->
+				<div class="portada">
+					<img :src="cancion.album.urlPortada" width="200" height="200">
+				</div>
 				<p class="texto-nombre">{{cancion.nombre}}</p>
 				<br>
 
@@ -57,6 +59,11 @@
 
 		</div>
 
+		<!-- TODO
+
+		- Hacer las funciones para pausar y reproducir una cancion
+
+		-->
 
 	</div>
 

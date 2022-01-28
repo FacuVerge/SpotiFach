@@ -42,7 +42,7 @@ body {
 
 .contenedor-reproductor {
 	display: flex;
-	margin-top: 4%;
+	margin-top: 2%;
 	justify-content: center;
 	align-items: center;
 }
@@ -50,7 +50,9 @@ body {
 .cancion {
 	background-color: #FF6F06;
 	border-radius: 30px;
-	padding: 5%;
+	padding: 3%;
+	width: 20%;
+	max-height: 50%;
 }
 
 .arrow {
@@ -68,7 +70,7 @@ body {
 .texto-artista {
 	color: black;
 	font-family: Nobile;
-	font-size: 175%;
+	font-size: 150%;
 	margin-left: 2%;
 }
 
@@ -89,4 +91,10 @@ body {
 
 .boton-pausa-der {
 	margin-right: 2%;
+}
+
+.portada {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
