@@ -33,11 +33,24 @@ body {
 	display: inline-block;
 	text-align: left;
 	margin-top: 1%;
-	margin-left: 2%;
+	margin-left: 1%;
+	background-color: black;
+   	cursor: pointer;
+    border-radius: 100%;
+    padding: 1%;
+    padding-bottom: 0.7%;
+}
+
+.boton-atras:hover {
+	display: inline-block;
+	text-align: left;
+	margin-top: 1%;
+	margin-left: 1%;
 	background-color: #1C1B1B;
    	cursor: pointer;
     border-radius: 100%;
     padding: 1%;
+    padding-bottom: 0.7%;
 }
 
 .contenedor-reproductor {
@@ -49,29 +62,56 @@ body {
 
 .cancion {
 	background-color: #FF6F06;
-	border-radius: 30px;
-	padding: 3%;
-	width: 20%;
+	border-radius: 15px;
+	padding: 2%;
+	width: 15%;
 	max-height: 50%;
 }
 
 .arrow {
-	padding: 10px;
+	margin: 20px;
 	cursor: pointer;
+	border-radius: 100%;
+	background-color: black;
+	padding: 1%;
+	display: flex;
+    justify-content: left;
+    align-items: center;
+    padding-bottom: 0.7%;
 }
+
+.arrow:hover {
+	margin: 20px;
+	cursor: pointer;
+	border-radius: 100%;
+	background-color: #1C1B1B;
+	padding: 1%;
+	display: flex;
+    justify-content: left;
+    align-items: center;
+    padding-bottom: 0.7%;
+}
+
 
 .texto-nombre {
 	color: black;
 	font-family: Nobile;
-	font-size: 200%;
+	font-size: 150%;
 	text-align: center;
+}
+
+.artistas-cancion {
+	display: flex;
+    justify-content: left;
+    align-items: center;
 }
 
 .texto-artista {
 	color: black;
 	font-family: Nobile;
-	font-size: 150%;
+	font-size: 100%;
 	margin-left: 2%;
+	font-style: oblique;
 }
 
 .botones {
@@ -97,4 +137,8 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+
+.imagen-portada {
+	box-shadow: 5px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }

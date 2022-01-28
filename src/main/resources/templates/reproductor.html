@@ -16,9 +16,7 @@
 
 		<nav class="menu">
 			<a class="boton-atras" href="seleccion_genero.html">
-				<div>
-					<img src="../static/resources/img/flecha.png" alt="<-" >
-				</div>
+				<img src="../static/resources/img/flecha.png" alt="<-" >
 			</a>
 			<div class="logo">
 				<div class="marca">
@@ -32,30 +30,35 @@
 
 		<div class="contenedor-reproductor">
 
-			<a v-on:click="anteriorCancion()" class="arrow"><img src="../static/reproductor/img/left.png"/></a>
+			<a v-on:click="anteriorCancion()" class="arrow"><img class="img-flecha" src="../static/reproductor/img/left.png"/></a>
 
 			<div class="cancion" v-show="indice == index" v-for="(cancion, index) in this.canciones">
 				<div class="portada">
-					<img :src="cancion.album.urlPortada" width="200" height="200">
+					<img class="imagen-portada" :src="cancion.album.urlPortada" width="100%" height="100%">
 				</div>
 				<p class="texto-nombre">{{cancion.nombre}}</p>
-				<br>
+
 
 				<div class="artistas-cancion">
 					<img src="../static/reproductor/img/mic.png" width="30">
 					<a class="texto-artista">{{cancion.artistasMapeados}}</a>
 				</div>
+
+				<div class="pista-audio">
+					<audio preload="auto" :id="cancion.id" :src="cancion.urlPista"></audio>
+				</div>
+
 			</div>
 
-			<a v-on:click="siguienteCancion()" class="arrow"><img src="../static/reproductor/img/right.png"/></a>
+			<a v-on:click="siguienteCancion()" class="arrow"><img class="img-flecha" src="../static/reproductor/img/right.png"/></a>
 
 		</div>
 		<div class="botones">
 
-			<a v-on:click="pausarCancion()" class="boton-reproductor boton-pausa-izq"><img src="../static/reproductor/img/pause.png"/></a>
-			<a v-on:click="pausarCancion()" class="boton-reproductor boton-pausa-der"><img src="../static/reproductor/img/pause.png"/></a>
+			<a v-on:click="pausarMusica()" class="boton-reproductor boton-pausa-izq"><img src="../static/reproductor/img/pause.png"/></a>
+			<a v-on:click="pausarMusica()" class="boton-reproductor boton-pausa-der"><img src="../static/reproductor/img/pause.png"/></a>
 
-			<a v-on:click="reproducirCancion()" class="boton-reproductor"><img src="../static/reproductor/img/play.png"/></a>
+			<a v-on:click="reproducirMusica" class="boton-reproductor"><img src="../static/reproductor/img/play.png"/></a>
 
 		</div>
 

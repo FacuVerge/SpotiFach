@@ -33,11 +33,24 @@ body {
 	display: inline-block;
 	text-align: left;
 	margin-top: 1%;
-	margin-left: 2%;
+	margin-left: 1%;
+	background-color: black;
+   	cursor: pointer;
+    border-radius: 100%;
+    padding: 1%;
+    padding-bottom: 0.7%;
+}
+
+.boton-atras:hover {
+	display: inline-block;
+	text-align: left;
+	margin-top: 1%;
+	margin-left: 1%;
 	background-color: #1C1B1B;
    	cursor: pointer;
     border-radius: 100%;
     padding: 1%;
+    padding-bottom: 0.7%;
 }
 
 .pregunta {
