@@ -1,11 +1,14 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml" xmlns:v-on="http://www.w3.org/1999/xhtml">
 <head>
 	<meta charset="UTF-8">
-	<title>Spotifach</title>
+	<title>SpotiFach</title>
 	<link rel="stylesheet" href="../static/reproductor/reproductor.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nobile">
 	<link rel="icon" href="../static/resources/img/logo.png" type="image/icon type">
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vue-resource@1.5.1"></script>
 </head>
 <body>
 
@@ -13,7 +16,7 @@
 
 		<nav class="menu">
 			<a class="boton-atras" href="seleccion_genero.html">
-				<div class="boton-redondo" >
+				<div>
 					<img src="../static/resources/img/flecha.png" width="30px" alt="<-" >
 				</div>
 			</a>
@@ -27,27 +30,37 @@
 			</div>
 		</nav>
 
-		<div class="canciones">
+		<div class="contenedor-reproductor">
 
-			<div class="cancion" v-for="cancion in canciones">
+			<a v-on:click="anteriorCancion()" class="arrow"><img src="../static/reproductor/img/left.png"/></a>
 
-				<div class="imagen">
-					<img v-bind:src="cancion.urlPortada" width="30px">
+			<div class="cancion" v-show="indice == index" v-for="(cancion, index) in this.canciones">
+				<!-- <img :src="cancion.urlPista" height="220" width="260"> -->
+				<p class="texto-nombre">{{cancion.nombre}}</p>
+				<br>
+
+				<div class="artistas-cancion">
+					<img src="../static/reproductor/img/mic.png" width="30">
+					<a class="texto-artista">{{cancion.artistasMapeados}}</a>
 				</div>
-				<div class="titulo">
-					<a class="texto-cancion">{{cancion.nombre}}</a>
-				</div>
-				<div class="artistas">
-
-					<img class="imagen" src="../static/reproductor/img/mic.png" width="20px">
-
-					<a class="texto-artista">{{cancion.artistas}}</a>
-
-				</div>
-
 			</div>
+
+			<a v-on:click="siguienteCancion()" class="arrow"><img src="../static/reproductor/img/right.png"/></a>
+
 		</div>
+		<div class="botones">
+
+			<a v-on:click="pausarCancion()" class="boton-reproductor boton-pausa-izq"><img src="../static/reproductor/img/pause.png"/></a>
+			<a v-on:click="pausarCancion()" class="boton-reproductor boton-pausa-der"><img src="../static/reproductor/img/pause.png"/></a>
+
+			<a v-on:click="reproducirCancion()" class="boton-reproductor"><img src="../static/reproductor/img/play.png"/></a>
+
+		</div>
+
+
 	</div>
+
+	<script src="../static/reproductor/reproductor.js"></script>
 
 </body>
 </html>

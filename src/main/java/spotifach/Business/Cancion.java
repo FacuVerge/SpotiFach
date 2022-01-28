@@ -46,4 +46,7 @@ public class Cancion {
 	)
 	private Set<Genero> generos;
 
+	@Transient
+	private String artistasMapeados;
+
 }
