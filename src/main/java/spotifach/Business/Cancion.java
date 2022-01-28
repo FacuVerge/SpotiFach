@@ -1,6 +1,6 @@
 package spotifach.Business;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -35,7 +35,7 @@ public class Cancion {
 
 	@ManyToOne
 	@JoinColumn(name = "id_album")
-	@JsonBackReference(value = "cancion")
+	@JsonManagedReference(value = "cancion")
 	private Album album;
 
 	@ManyToMany(cascade = {CascadeType.MERGE}, fetch = FetchType.EAGER)

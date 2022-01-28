@@ -18,7 +18,7 @@ new Vue({
             .then(response =>{return response.json()})
             .then(cancionesObtenidas =>{
                 this.canciones = cancionesObtenidas;
-            });
+            }).then(startCarrusel);;
     },
     methods:{
     }

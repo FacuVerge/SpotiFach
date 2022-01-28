@@ -1,6 +1,6 @@
 package spotifach.Business;
 
-import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -35,7 +35,7 @@ public class Album {
 	private Set<Artista> artistas;
 
 	@OneToMany(mappedBy = "album", cascade = {CascadeType.ALL})
-	@JsonManagedReference(value = "canciones")
+	@JsonBackReference(value = "canciones")
 	private Set<Cancion> canciones;
 
 }
