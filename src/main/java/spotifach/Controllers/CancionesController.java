@@ -35,7 +35,6 @@ public class CancionesController {
 		try {
 			List<Cancion> canciones = cancionSvc.findCancionesByGenero(genero);
 			for (Cancion cancion : canciones) {
-
 				cancion.setArtistasMapeados(String.join(", ", cancion.getArtistas().stream().flatMap(artista -> Stream.of(artista.getNombre())).collect(Collectors.toSet())));
 			}
 			return ResponseEntity.status(200).body(canciones);
