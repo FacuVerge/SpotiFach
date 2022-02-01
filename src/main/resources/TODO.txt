@@ -1,6 +1,9 @@
 
 Version 1: Completa
 
+
+
+
 -- Para llegar a una versión 2 --
 
 . Agregar barra para manejar el volumen de la canción
