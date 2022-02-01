@@ -1,5 +1,3 @@
-GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO jerry;
-
 INSERT INTO album (anio, nombre, url_portada) VALUES
     (1975, 'A Night at the Opera', 'https://i.postimg.cc/qMrqsGh4/51h786-Suy-IL-AC.jpg'),
     (2010, 'Doo-Wops & Hooligans', 'https://i.postimg.cc/XYyPn9LB/R-14424600-1574266542-1141.jpg'),
