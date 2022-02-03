@@ -1,1 +1,1 @@
-web: java -jar target/spotifach-1.0-SNAPSHOT.jar -p 7008
+web: java -Dserver.port=$PORT -jar target/spotifach-1.0-SNAPSHOT.jar -p 7008
