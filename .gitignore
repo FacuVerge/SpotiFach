@@ -10,3 +10,4 @@ target/**
 
 # Log file
 *.log
+*.properties
